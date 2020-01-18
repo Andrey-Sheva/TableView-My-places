@@ -27,11 +27,16 @@ class MainViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = restaurentNames[indexPath.row]
-        cell.imageView?.image = UIImage(named: "блюдо")
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
+        cell.nameLabel?.text = restaurentNames[indexPath.row]
+        cell.placesImage?.image = UIImage(named: "food")
+        cell.placesImage?.layer.cornerRadius = cell.placesImage.frame.size.height / 2
+        cell.placesImage?.clipsToBounds = true
         return cell
     }
-
+    
+    // MARK: - TableView delegate
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 85
+    }
 }
