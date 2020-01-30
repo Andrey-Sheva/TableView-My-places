@@ -10,7 +10,7 @@ import UIKit
 
 class NewPlaceViewController: UITableViewController {
 
-
+    var currentPlace: Place?
    
     @IBOutlet weak var saveButton: UIBarButtonItem!
     @IBOutlet weak var placeImage: UIImageView!
@@ -26,13 +26,36 @@ class NewPlaceViewController: UITableViewController {
         tableView.tableFooterView = UIView()
         saveButton.isEnabled = false
         namePlace.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
-        
+        setupEditScreen()
         
     }
     
   
     @IBAction func cancelButton(_ sender: Any) {
         dismiss(animated: true, completion: nil)
+    }
+    
+    private func setupEditScreen(){
+        if currentPlace != nil{
+            
+            setupNavigationBar()
+            
+            guard let data = currentPlace?.imageData, let image = UIImage(data: data) else {return}
+            placeImage.image = image
+            placeImage.contentMode = .scaleAspectFill
+            namePlace.text = currentPlace?.name
+            typePlace.text = currentPlace?.type
+            locationPlace.text = currentPlace?.location
+        }
+    }
+    
+    private func setupNavigationBar(){
+        if let topBarItem = navigationController?.navigationBar.topItem{
+            topBarItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        }
+        navigationItem.leftBarButtonItem = nil
+        title = currentPlace?.name
+        saveButton.isEnabled = true
     }
     
     //MARK: -  Table view delegate
@@ -61,13 +84,25 @@ class NewPlaceViewController: UITableViewController {
             view.endEditing(true)
         }
     }
-     func saveNewPlace(){
+     func savePlace(){
         
         
         let image = placeImage.image
         let imageData = image?.pngData()
         let newPlace = Place(name: namePlace.text!, location: locationPlace.text, type: typePlace.text, imageData: imageData)
-        StorageManager.saveObject(newPlace)
+        
+        
+        if currentPlace != nil {
+            try! realm.write{
+                currentPlace?.name = newPlace.name
+                currentPlace?.type = newPlace.type
+                currentPlace?.location = newPlace.location
+                currentPlace?.imageData = newPlace.imageData
+            }} else {
+                StorageManager.saveObject(newPlace)
+            
+        }
+        
         
         
 
