@@ -7,7 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BE5AC39CD254BDE40CC9441 /* Pods_TableView_My_places.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 522B96A3C0E13C7CC26CC713 /* Pods_TableView_My_places.framework */; };
+		D322FBFB23D46356005316ED /* NewPlaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D322FBFA23D46356005316ED /* NewPlaceViewController.swift */; };
 		D34348B423D33A65004098F3 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34348B323D33A65004098F3 /* CustomTableViewCell.swift */; };
+		D34883F623D37A2900ADCEA0 /* PlaceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34883F523D37A2900ADCEA0 /* PlaceModel.swift */; };
+		D379B09123D9AA29001021C0 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D379B09023D9AA29001021C0 /* StorageManager.swift */; };
 		D3FB200923D1E187006CD723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FB200823D1E187006CD723 /* AppDelegate.swift */; };
 		D3FB200B23D1E187006CD723 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FB200A23D1E187006CD723 /* SceneDelegate.swift */; };
 		D3FB201023D1E187006CD723 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3FB200E23D1E187006CD723 /* Main.storyboard */; };
@@ -17,7 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		46C15092B0382F185127D93A /* Pods-TableView My places.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView My places.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableView My places/Pods-TableView My places.release.xcconfig"; sourceTree = "<group>"; };
+		522B96A3C0E13C7CC26CC713 /* Pods_TableView_My_places.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableView_My_places.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D322FBFA23D46356005316ED /* NewPlaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewPlaceViewController.swift; sourceTree = "<group>"; };
 		D34348B323D33A65004098F3 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		D34883F523D37A2900ADCEA0 /* PlaceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceModel.swift; sourceTree = "<group>"; };
+		D379B09023D9AA29001021C0 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		D3FB200523D1E187006CD723 /* TableView My places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView My places.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3FB200823D1E187006CD723 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3FB200A23D1E187006CD723 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +35,7 @@
 		D3FB201423D1E19E006CD723 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3FB201623D1E19E006CD723 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3FB201C23D209BD006CD723 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		EDF3517F052A74FB253DF74B /* Pods-TableView My places.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableView My places.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableView My places/Pods-TableView My places.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE5AC39CD254BDE40CC9441 /* Pods_TableView_My_places.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		216882522BDBE8BB8CEE5B5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				522B96A3C0E13C7CC26CC713 /* Pods_TableView_My_places.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		45E2A1D40E75CBF5595F7743 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EDF3517F052A74FB253DF74B /* Pods-TableView My places.debug.xcconfig */,
+				46C15092B0382F185127D93A /* Pods-TableView My places.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D3FB1FFC23D1E187006CD723 = {
 			isa = PBXGroup;
 			children = (
 				D3FB200723D1E187006CD723 /* TableView My places */,
 				D3FB200623D1E187006CD723 /* Products */,
+				45E2A1D40E75CBF5595F7743 /* Pods */,
+				216882522BDBE8BB8CEE5B5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,7 +89,10 @@
 			isa = PBXGroup;
 			children = (
 				D3FB200823D1E187006CD723 /* AppDelegate.swift */,
+				D34883F523D37A2900ADCEA0 /* PlaceModel.swift */,
+				D379B09023D9AA29001021C0 /* StorageManager.swift */,
 				D3FB201C23D209BD006CD723 /* MainViewController.swift */,
+				D322FBFA23D46356005316ED /* NewPlaceViewController.swift */,
 				D34348B323D33A65004098F3 /* CustomTableViewCell.swift */,
 				D3FB200A23D1E187006CD723 /* SceneDelegate.swift */,
 				D3FB200E23D1E187006CD723 /* Main.storyboard */,
@@ -77,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3FB201923D1E19E006CD723 /* Build configuration list for PBXNativeTarget "TableView My places" */;
 			buildPhases = (
+				E156DC43C60E4D4436EA411E /* [CP] Check Pods Manifest.lock */,
 				D3FB200123D1E187006CD723 /* Sources */,
 				D3FB200223D1E187006CD723 /* Frameworks */,
 				D3FB200323D1E187006CD723 /* Resources */,
+				9A2FED035561472A1C53EAA7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,13 +171,57 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9A2FED035561472A1C53EAA7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TableView My places/Pods-TableView My places-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableView My places/Pods-TableView My places-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E156DC43C60E4D4436EA411E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableView My places-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		D3FB200123D1E187006CD723 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				D3FB201D23D209BD006CD723 /* MainViewController.swift in Sources */,
+				D322FBFB23D46356005316ED /* NewPlaceViewController.swift in Sources */,
 				D3FB200923D1E187006CD723 /* AppDelegate.swift in Sources */,
+				D379B09123D9AA29001021C0 /* StorageManager.swift in Sources */,
+				D34883F623D37A2900ADCEA0 /* PlaceModel.swift in Sources */,
 				D34348B423D33A65004098F3 /* CustomTableViewCell.swift in Sources */,
 				D3FB200B23D1E187006CD723 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,6 +365,7 @@
 		};
 		D3FB201A23D1E19E006CD723 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EDF3517F052A74FB253DF74B /* Pods-TableView My places.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -304,6 +384,7 @@
 		};
 		D3FB201B23D1E19E006CD723 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46C15092B0382F185127D93A /* Pods-TableView My places.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

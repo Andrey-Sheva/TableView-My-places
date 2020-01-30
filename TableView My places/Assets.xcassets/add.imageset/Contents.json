@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "eda-ne-tolko-5.jpg",
+      "filename" : "add-2.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "eda-ne-tolko-6.jpg",
+      "filename" : "add-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "eda-ne-tolko-7.jpg",
+      "filename" : "add.png",
       "scale" : "3x"
     }
   ],
